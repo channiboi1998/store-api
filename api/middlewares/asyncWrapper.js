@@ -1,5 +1,5 @@
 const asyncWrapper = (fn) => {
-    return (request, response, next) => {
+    return async (request, response, next) => {
         try {
             await fn(request, response, next);
         } catch(error) {
